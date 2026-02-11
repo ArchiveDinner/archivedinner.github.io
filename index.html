@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX // PERSONAL_PORTAL</title>
+    <style>
+        /* Y2K Aesthetic Styles */
+        body {
+            background-color: #e0e0e0;
+            background-image: linear-gradient(#dcdcdc 1px, transparent 1px);
+            background-size: 100% 3px; /* Subtle scan-line effect */
+            font-family: "Verdana", sans-serif;
+            font-size: 11px;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
 
+        #container {
+            width: 900px;
+            background: #fff;
+            border: 1px solid #999;
+            display: grid;
+            grid-template-columns: 180px 1fr 220px;
+            grid-template-rows: auto 1fr auto;
+            min-height: 600px;
+        }
+
+        /* Header / Nav Area */
+        header {
+            grid-column: 1 / span 3;
+            border-bottom: 1px solid #000;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-transform: lowercase;
+            margin: 0;
+            letter-spacing: -2px;
+            color: #00AEEF; /* Cyber-blue accent */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            margin-left: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        /* Sidebar - Content Lists */
+        .sidebar {
+            border-right: 1px solid #ccc;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+
+        .section-title {
+            background: #00AEEF;
+            color: white;
+            padding: 2px 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { margin-bottom: 8px; }
+        li a { text-decoration: none; color: #444; }
+        li a:hover { color: #f00; text-decoration: underline; }
+
+        /* Main Blog Feed - Message Log Style */
+        main {
+            padding: 15px;
+            overflow-y: scroll;
+            height: 500px;
+        }
+
+        .post {
+            margin-bottom: 25px;
+            border-left: 3px solid #00AEEF;
+            padding-left: 10px;
+        }
+
+        .post-meta { color: #999; font-size: 10px; margin-bottom: 5px; }
+        .post-title { font-weight: bold; color: #000; font-size: 14px; }
+
+        /* News Column - Multi-Feed Style */
+        .news-column {
+            border-left: 1px solid #ccc;
+            padding: 10px;
+            background: #f2f6f8;
+        }
+
+        .news-box {
+            height: 140px;
+            overflow-y: scroll;
+            border: 1px solid #ccd;
+            background: #fff;
+            padding: 5px;
+            margin-bottom: 15px;
+            font-size: 10px;
+        }
+
+        .news-item { margin-bottom: 8px; border-bottom: 1px dotted #ccc; padding-bottom: 4px; }
+
+        /* Footer Landscape */
+        footer {
+            grid-column: 1 / span 3;
+            background: #00AEEF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+
+        /* Custom Scrollbar for that OS look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #eee; }
+        ::-webkit-scrollbar-thumb { background: #bbb; border: 1px solid #999; }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header>
+        <h1>personal_portal_v1.0</h1>
+        <nav>
+            <a href="#">front</a>
+            <a href="#">archive</a>
+            <a href="#">stimuli</a>
+            <a href="#">contact</a>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <div class="section-title">Contents</div>
+        <ul>
+            <li><a href="#">+ recent_thoughts</a></li>
+            <li><a href="#">+ photography</a></li>
+            <li><a href="#">+ code_snippets</a></li>
+            <li><a href="#">+ music_log</a></li>
+        </ul>
+        <br>
+        <div class="section-title">Filter</div>
+        <ul>
+            <li><a href="#">:: tech</a></li>
+            <li><a href="#">:: design</a></li>
+            <li><a href="#">:: personal</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="post">
+            <div class="post-meta">2026-02-11 12:00 | mood: productive</div>
+            <div class="post-title">Resurrecting the Pixel Aesthetic</div>
+            <p>Today I decided to strip away the modern web and go back to basics. There's something about 11px Verdana that feels like home.</p>
+        </div>
+
+        <div class="post">
+            <div class="post-meta">2026-02-10 09:15 | mood: nostalgic</div>
+            <div class="post-title">Flash is dead, long live the grid</div>
+            <p>Searching through old hard drives and found screenshots of 2003 design portals. The density was incredible.</p>
+        </div>
+    </main>
+
+    <aside class="news-column">
+        <div class="section-title">World News</div>
+        <div class="news-box">
+            <div class="news-item"><b>12:45</b> - Global tech summit announced for June.</div>
+            <div class="news-item"><b>10:20</b> - New advancements in solar-glass panels.</div>
+            <div class="news-item"><b>08:00</b> - Local art collective launches "Pixel-Fest".</div>
+        </div>
+
+        <div class="section-title">Design Feed</div>
+        <div class="news-box">
+            <div class="news-item"><b>v.02</b> - New typeface released: 'Cyber-Sans'.</div>
+            <div class="news-item"><b>article</b> - Why we miss experimental navigation.</div>
+            <div class="news-item"><b>link</b> - Visit the Museum of Web Design.</div>
+        </div>
+    </aside>
+
+    <footer>
+        CULTIVATING THE DIGITAL CONSCIOUSNESS // EST 2026 // ALL RIGHTS RESERVED
+    </footer>
+</div>
+
+</body>
+</html>
